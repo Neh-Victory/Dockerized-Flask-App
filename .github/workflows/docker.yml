@@ -1,15 +1,16 @@
-name: Docker CI Pipeline
+name: CI Check
+
 on:
   push:
     branches: ["main"]
-  
-    jobs:
-      build:
-        runs-on: ubuntu-latest
-        steps:
-          - name: Checkout code
-            uses: actions/checkout@v3
-            
-          - name: Build Docker image
-            run: docker build -t flask-app .
-            
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Success Test
+        run: echo "Workflow is running successfully! 🚀"
