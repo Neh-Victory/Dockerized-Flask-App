@@ -2,7 +2,7 @@ name: CI Check
 
 on:
   push:
-    branches: ["main"]
+    branches: ["master"]
 
 jobs:
   build:
@@ -11,6 +11,5 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
-
       - name: Success Test
         run: echo "Workflow is running successfully! 🚀"
